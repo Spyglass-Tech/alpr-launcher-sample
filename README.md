@@ -153,13 +153,13 @@ alprLauncherBuilder.addHotlist("target_table_name")
 This method defines which hotlist source to use during scanning.
 
 ```kotlin
-alprLauncherBuilder.setHotlistSourceType(HotlistSourceType.PASSED_ONLY)
+alprLauncherBuilder.setHotlistSourceType(HotlistSourceType.EMBEDDED)
 ```
 
 - **Enum Values**:
-    - `PASSED_ONLY`: Use only the hotlist passed via intent.
-    - `LOADED_ONLY`: Use the hotlist loaded in the SENTINEL/LEGION app.
-    - `BOTH`: Use both the passed and loaded hotlists.
+    - `EMBEDDED`: Use only the hotlist passed via intent.
+    - `LOCAL`: Use the hotlist loaded in the SENTINEL/LEGION app.
+    - `ALL`: Use both the passed and loaded hotlists.
 - **Returns**: `ALPRLauncherBuilder` instance for method chaining.
 
 ---
@@ -284,7 +284,7 @@ class MainActivity : AppCompatActivity(), LauncherListener {
 
         alprLauncherBuilder
             .setCameraType(CameraType.DEVICE_CAMERA)
-            .setHotlistSourceType(HotlistSourceType.PASSED_ONLY)
+            .setHotlistSourceType(HotlistSourceType.EMBEDDED)
             .setResponseType(ResponseType.ALL_ALERTS)
             .setHotlistFileAndUri(hotlistFile, hotlistUri)
             .addHotlist("license_plate_table")
