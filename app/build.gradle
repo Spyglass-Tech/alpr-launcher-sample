@@ -40,7 +40,7 @@ android {
 dependencies {
     //implementation fileTree(include: ['*.aar'], dir: 'libs')
     // or
-    implementation(files("libs/sentinel-launcher-v1.aar"))
+    implementation(files("libs/sentinel-launcher-v1-0-2.aar"))
 
     implementation libs.androidx.core.ktx
     implementation libs.androidx.appcompat

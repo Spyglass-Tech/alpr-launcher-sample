@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity(), LauncherListener {
     private val alprLauncher = ALPRLauncher
 
     // State variables for configuration
-    private var hotlistSourceType = HotlistSourceType.PASSED_ONLY
+    private var hotlistSourceType = HotlistSourceType.EMBEDDED
     private var cameraType = CameraType.DEVICE_CAMERA
     private var responseType = ResponseType.ALL_ALERTS
     private var responseMode = ResponseMode.SINGLE
@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity(), LauncherListener {
         setupDropdown(binding.dropdownHotlistSourceType, HotlistSourceType.entries.toTypedArray()) {
             hotlistSourceType = it
         }
-        binding.dropdownHotlistSourceType.setText(HotlistSourceType.PASSED_ONLY.name, false)
+        binding.dropdownHotlistSourceType.setText(HotlistSourceType.EMBEDDED.name, false)
 
         setupDropdown(binding.dropdownResponseMode, ResponseMode.entries.toTypedArray()) {
             responseMode = it
